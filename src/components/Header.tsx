@@ -33,6 +33,10 @@ export const Header: FC<HeaderProps> = ({ style = {}, ...props }) => {
       >
         <h1 style={{ color: gray[200], fontSize: 24 }}>ICF Social</h1>
         <span style={{ flex: 1 }}></span>
+        {location.pathname !== '/allPosts'
+          && <a href="/allPosts" style={{ color: gray[300] }}>All posts</a>}
+        {location.pathname !== '/'
+          && <a href="/" style={{ color: gray[300] }}>New posts</a>}
         <p>{user.name}</p>
         <a href="/" style={{ color: gray[300] }}>
           Log out

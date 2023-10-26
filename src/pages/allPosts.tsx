@@ -1,12 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import { PostWithAuthor } from "~/db/schema";
 import { Header } from "~/components/Header";
-import { Feed } from "../components/Feed/Feed";
+import {Feed} from "../components/Feed/Feed";
 
-const Home = () => {
+export default () => {
   const {isLoading, error, data} = useQuery<PostWithAuthor[]>({
-    queryKey: ["unseenPosts"],
-    queryFn: () => fetch("/api/unseenPosts").then((r) => r.json()),
+    queryKey: ["posts"],
+    queryFn: () => fetch("/api/posts").then((r) => r.json()),
   });
 
   if (isLoading || error || !data) {
@@ -20,5 +20,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

@@ -6,4 +6,4 @@ export default {
   dbCredentials: { connectionString },
   schema: "src/db/schema.ts",
   out: "src/db/migrations",
-} satisfies Config;
+} as Config;

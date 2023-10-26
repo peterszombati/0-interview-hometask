@@ -9,6 +9,10 @@ This is a simple app with users and posts, something like a social network. (thi
 ```bash
 docker compose up -d
 ```
+or
+```bash
+npm run up
+```
 
 2. Open `http://localhost:3000`
 

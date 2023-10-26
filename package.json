@@ -4,6 +4,7 @@
   "scripts": {
     "generate": "drizzle-kit generate:pg",
     "migrate": "tsx src/db/migrate.ts",
+    "up": "docker compose up -d",
     "dev": "npm run generate && npm run migrate & next dev"
   },
   "dependencies": {
